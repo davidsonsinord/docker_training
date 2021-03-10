@@ -1,6 +1,6 @@
 
 tutoapi/node_modules/*
-
+built/
 .idea
 
 *.iml
