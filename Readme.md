@@ -23,11 +23,12 @@ And copy-past the content of `init-db.sql` file.
 
 Install node and npm on your environment
 
-Modify this part of `app.js` file with your database credential :  
+Modify this part of `app.ts` file with your database credential :  
 
 ```
 export MYSQL_USER=mysqluser;
 export MYSQL_HOST=mysqlhost;
+export MYSQL_PORT=mysqlport;
 export MYSQL_PASSWORD=mysqlpwd;
 export MYSQL_DATABASE=workshop;
 ```
