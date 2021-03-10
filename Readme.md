@@ -23,11 +23,12 @@ And copy-past the content of `init-db.sql` file.
 
 Install node and npm on your environment
 
-Modify this part of `app.js` file with your database credential :  
+Modify this part of `app.ts` file with your database credential :  
 
 ```
 export MYSQL_USER=mysqluser;
 export MYSQL_HOST=mysqlhost;
+export MYSQL_PORT=mysqlport;
 export MYSQL_PASSWORD=mysqlpwd;
 export MYSQL_DATABASE=workshop;
 ```
@@ -50,7 +51,7 @@ docker build -t tutoapi.
 
 # with docker run 
 docker run --name tutomysql -d -v /Users/myname/myfappfolder/mysqldata/:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=root tutobdd 
-docker run --name tutoapi -d -p 3001:3000 --link tutomysql:mysql-container -e MYSQL_HOST=mysql-container -e MYSQL_USER=root -e MYSQL_PASSWORD=root tutoapi
+docker run --name tutoapi -d -p 3001:3000 --link tutomysql:mysql-container -e MYSQL_HOST=mysql-container -e MYSQL_USER=root -e MYSQL_PASSWORD=root -e MYSQL_DATABASE=workshop tutoapi
 
 
 # with docker-compose
